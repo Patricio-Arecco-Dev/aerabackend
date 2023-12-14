@@ -1,0 +1,96 @@
+<nav>
+  <ul class="lu_nav">
+    <li class="li_nav">
+      <a href="/admin/jsPublicationsSetup">Back Setup Publications</a>
+    </li>
+  </ul>
+</nav>
+<main class="form_container">
+  {{!--Form-- use:enctype="multipart/form-data" only if need send files --}}
+  <form action="/admin/jsPublicationsSetup/modifyPub" method="post" enctype="multipart/form-data" class="form_form">
+    <h2 class="form_h2">
+      Change Data Publication Message of User
+    </h2>
+    {{!-- Id --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="idForm">
+          Id:
+        </label>
+        <input type="number" name="id_messenger" value="{{userMessage.id_messenger}}" class="form_input_id" id="idForm"
+          readonly>
+      </div>
+    </div>
+    {{!-- Nic Name --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="nameForm">
+          Nic:
+        </label>
+        <input type="text" value="{{userMessage.name_messenger}}" name="name_messenger" placeholder="Enter your Nic-name"
+          class="form_input_nic" id="nameForm">
+      </div>
+    </div>
+    {{!-- Text Area --}}
+    <div class="form_div">
+      <h4 class="form_h4" for="publicForm">Message Text Area:</h4>
+      <textarea class="form_text_area" name="content_messenger" placeholder="Enter your Message Here"
+        id="textForm">{{userMessage.content_messenger}}</textarea>
+    </div>
+    {{!-- E-mail --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="emailForm">
+          E-mail:
+        </label>
+        <input type="email" class="form_input_email" placeholder="Enter your E-mail"
+          value="{{userMessage.email_messenger}}" name="email_messenger" id="emailForm">
+      </div>
+    </div>
+    {{!-- Public? --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="statPublicForm">
+          Public? :
+        </label>
+        <input type="text" value="{{userMessage.public_messenger}}" name="public_messenger" placeholder="Status public"
+          class="form_input_id" id="statPublicForm" readonly>
+      </div>
+      <div class="form_div_div">
+        <h6 class="form_h6" for="publicForm">Change the state by toggling the Checkbox:</h6>
+        <input type="checkbox" name="check_public_message" {{public}} class="form_input_check" id="publicForm">
+      </div>
+    </div>
+    {{!-- Image --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="codeImageForm">
+          Code Image:
+        </label>
+        <input type="text" value="{{userMessage.img_messenger}}" name="code_img_messenger" class="form_input_id"
+          id="codeImageForm" readonly>
+      </div>
+      <div class="form_div_div">
+        <label class="form_label" for="new_img_messenger">
+          Image:
+        </label>
+        <input type="file" class="form_input_image" placeholder="Select an Image" name="new_img_messenger"
+          id="new_img_messenger">
+      </div>
+      <div class="form_div_div">
+        <h6 class="form_h6" for="deleteForm">Do you want Delete Image?</h6>
+        <input type="checkbox" name="img_delete" class="form_input_check" id="deleteForm" value="1">
+      </div>
+    </div>
+    {{!-- Buttons --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <button type="submit" class="form_button_submit">Save</button>
+        <a href="/admin/jsPublicationsSetup"><button type="button" class="form_button_submit">Cancel</button></a>
+      </div>
+    </div>
+    {{#if error}}
+    <h5 class="form_error">{{message}} </h5>
+    {{/if}}
+  </form>
+</main>

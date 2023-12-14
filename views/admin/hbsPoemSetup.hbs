@@ -1,0 +1,46 @@
+<nav>
+  <ul class="lu_nav">
+    <li class="li_nav">
+      <a href="/admin/jsAdminSetup/">Back Setup Session</a>
+    </li>
+    <li class="li_nav">
+      <a href="/admin/jsPoems/newPoem">New Poem</a>
+  </ul>
+</nav>
+{{!-- Tabla --}}
+<div class="table_container">
+  <table class="table_table">
+    <caption class="table_caption">Poems List</caption>
+    <thead class="table_thead">
+      <tr class="table_row_th">
+        <th class="col_Id">Id</th>
+        <th class="col_Show">Show</th>
+        <th class="col_Name">Name</th>
+        <th class="col_Poem">Poem</th>
+        <th class="col_Code">Id Cloud</th>
+        <th class="col_Image">Image</th>
+        <th class="col_Actions">Actions</th>
+      </tr>
+    </thead>
+    <tbody class="table_body">
+      {{#each poemsTable}}
+      <tr class="table_row_tr">
+        <th class="col_Id"> {{id_poems}}</th>
+        <td class="col_Show">{{public_poems}}</td>
+        <td class="col_Name">{{name_poems}}</td>
+        <td class="col_Poem">
+          <pre>{{poem_poems}}</pre>
+        </td>
+        <td class="col_Code">{{{img_poems}}}</td>
+        <td class="col_Image">{{{link_img_poems}}}</td>
+        <td class="col_Actions">
+          <a href="/admin/jsPoems/modifyPoem/{{id_poems}}"><img class="table_icon" src="../../../icons/pencil_icon.png"
+              alt="user icon"></img></a>
+          <a href="/admin/jsPoems/deletePoem/{{id_poems}}"><img class="table_icon" src="../../../icons/rubber_icon.png"
+              alt="user icon"></img></a>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

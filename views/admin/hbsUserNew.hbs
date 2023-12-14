@@ -1,0 +1,81 @@
+<nav>
+  <ul class="lu_nav">
+    <li class="li_nav">
+      <a href="/admin/jsAdminSetup/">Back Setup Session</a>
+    </li>
+  </ul>
+</nav>
+<main class="form_container">
+  <form action="/admin/jsUsers/newUser" method="post" class="form_form">
+    <h2 class="form_h2">Enter a New Public User</h2>
+    {{!-- Nic Name --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="nicForm">
+          Nic:
+        </label>
+        <input type="text" name="nic_usersPublics" placeholder="Enter the Nic" class="form_input_nic" id="nicForm">
+      </div>
+    </div>
+    {{!-- Password --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="passForm">
+          Pass:
+        </label>
+        <input type="password" name="pass_usersPublics" placeholder="Enter the Password" class="form_input_pass"
+          id="passForm">
+      </div>
+    </div>
+    {{!-- Name --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="rrrnameForm">
+          Name:
+        </label>
+        <input type="text" name="name_usersPublics" placeholder="Enter the Name" class="form_input_name"
+          id="rrrnameForm">
+      </div>
+    </div>
+    {{!-- Surname --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="surnameForm">
+          Surname:
+        </label>
+        <input type="text" name="surn_usersPublics" placeholder="Enter the Surname" class="form_input_surn"
+          id="surnameForm">
+      </div>
+    </div>
+    {{!-- Age --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="ageForm">
+          Age:
+        </label>
+        <input type="number" name="age_usersPublics" placeholder="Enter the Age" class="form_input_age" id="ageForm"
+          min="0" max="99">
+      </div>
+    </div>
+    {{!-- Email --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="emailForm">
+          Email:
+        </label>
+        <input type="email" name="email_usersPublics" placeholder="Enter the E-mail" class="form_input_email"
+          id="emailForm">
+      </div>
+    </div>
+    {{!-- Buttons --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <button type="submit" class="form_button_submit">Save</button>
+        <a class="form_a" href="/admin/jsAdminSetup/"><button type="button" class="form_button_submit">Cancel</button></a>
+      </div>
+    </div>
+    {{#if error}}
+    <h5 class="form_error">{{message}} </h5>
+    {{/if}}
+  </form>
+</main>

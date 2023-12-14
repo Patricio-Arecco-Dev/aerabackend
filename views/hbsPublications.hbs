@@ -1,0 +1,31 @@
+<nav>
+  <ul class="lu_nav">
+    <li class="li_nav">
+      <a href="/">Back Home</a>
+    </li>
+  </ul>
+</nav>
+{{!-- Tabla --}}
+<div class="table_container">
+  <table class="table_table">
+    <caption class="table_caption">Messages List</caption>
+    <thead class="table_thead">
+      <tr class="table_row_th">
+        <th class="col_Id">#</th>
+        <th class="col_Name">Name</th>
+        <th class="col_Msg">Message</th>
+        <th class="col_Image">Image</th>
+      </tr>
+    </thead>
+    <tbody class="body_pions">
+      {{#each messagesPublicTable}}
+      <tr class="table_row_tr">
+        <th class="col_Id"> {{id_messenger}}</th>
+        <td class="col_Name">{{name_messenger}}</td>
+        <td class="col_Msg">{{content_messenger}}</td>
+        <td class="col_Image">{{{link_img_messenger}}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

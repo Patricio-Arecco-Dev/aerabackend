@@ -1,0 +1,53 @@
+<nav>
+  <ul class="lu_nav">
+    <li class="li_nav">
+      <p class="p_nav"><a class="a_nav" href="/">Close Session</a></p>
+    </li>
+    <li class="li_nav">
+      <p class="p_nav"><a class="a_nav" href="/admin/jsPublicationsSetup">Set Publications</a></p>
+    </li>
+    <li class="li_nav">
+      <p class="p_nav"><a class="a_nav" href="/admin/jsPaintings">Set Paintings</a></p>
+    </li>
+    <li class="li_nav">
+      <p class="p_nav"><a class="a_nav" href="/admin/jsPoems">Set Poems</a></p>
+    </li>
+    <li class="li_nav">
+      <p class="p_nav"><a class="a_nav" href="/admin/jsUsers">New Users</a></p>
+    </li>
+  </ul>
+</nav>
+
+{{!-- Tabla --}}
+<div class="table_container">
+  <table class="table_table">
+    <caption class="table_caption">Public Users List</caption>
+    <thead class="table_thead">
+      <tr class="table_row_th">
+        <th class="col_Id">#</th>
+        <th class="col_Nic">Nic</th>
+        <th class="col_Name">Name</th>
+        <th class="col_Surname">Surname</th>
+        <th class="col_Email">Mail</th>
+        <th class="col_Actions">Actions</th>
+      </tr>
+    </thead>
+    <tbody class="table_body">
+      {{#each usersPublicTable}}
+      <tr class="table_row_tr">
+        <th class="col_Id"> {{id_usersPublics}}</th>
+        <td class="col_Nic">{{nic_usersPublics}}</td>
+        <td class="col_Name">{{name_usersPublics}}</td>
+        <td class="col_Surname">{{surn_usersPublics}}</td>
+        <td class="col_Email">{{{email_usersPublics}}}</td>
+        <td class="col_Actions">
+          <a href="/admin/jsUsers/modifyUser/{{id_usersPublics}}"><img class="table_icon"
+              src="../../../icons/pencil_icon.png" alt="user icon"></img></a>
+          <a href="/admin/jsUsers/deleteUser/{{id_usersPublics}}"><img class="table_icon"
+              src="../../../icons/rubber_icon.png" alt="user icon"></img></a>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,166 @@
+/* Aquí Inicia el CSS del Login / Messenger */
+.form_container {
+  display: flex;
+  gap: 24px;
+  min-height: 72vh;
+  justify-content: start;
+  width: 100%;
+  margin: 10px;
+}
+
+.form_input_id,
+.form_input_code,
+.form_input_nic,
+.form_input_name,
+.form_input_surn,
+.form_input_pass,
+.form_text_area,
+.form_text_poem,
+.form_text_paint,
+.form_input_check,
+.form_input_email,
+.form_input_image {
+  margin: 5px;
+}
+.form_h2 {
+  text-align: center;
+}
+
+.form_label,
+.form_h6 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.form_form,
+.form_div {
+  background: #ddd;
+  border-radius: 5px;
+  border: 1px solid #999;
+  padding: 6px 10px;
+  text-align: end;
+}
+
+.form_input_id,
+.form_input_nic,
+.form_input_name,
+.form_input_surn,
+.form_input_pass,
+.form_input_age,
+.form_input_email,
+.form_input_poem,
+.form_input_paint,
+.form_input_code,
+.form_input_image {
+  width: 79%;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #999;
+  font-size: 14px;
+  padding: 3px 5px;
+}
+
+.form_label {
+  padding: auto;
+  margin: auto;
+  width: 19%;
+}
+
+.form_error {
+  text-align: center;
+  font-size: medium;
+  margin: auto;
+}
+.form_h6 {
+  width: 80%;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.form_h4 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
+  font-size: 18px;
+  width: 100%;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.form_input_check {
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #999;
+  padding: 6px 10px;
+}
+
+.form_text_paint,
+.form_text_poem,
+.form_text_area {
+  resize: both;
+  height: 120px;
+  width: 95%;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #999;
+  font-size: 14px;
+  padding: 3px 5px;
+}
+
+.form_form .form_div:nth-child(4) {
+  align-items: center;
+}
+.form_button_submit {
+  background: #6c6c6d;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 16px;
+  padding: 6px 20px;
+  width: 100px;
+  position: relative;
+  left: 0px; /*90px*/
+  cursor: pointer;
+  transition: all 0.5s ease;
+  margin: 10px 20px 10px 0px; /*10px*/
+  border-radius: 5px;
+}
+.form_form .form_button_submit:hover {
+  background-color: rgb(0, 0, 0);
+}
+.form_form {
+  background: #ababac;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  padding: 6px 20px;
+  width: 50%;
+  position: relative;
+  left: 3px;
+  margin: 5px;
+  border-radius: 5px;
+}
+.form_a {
+  text-decoration: none;
+}
+
+.form_input_code,
+.form_input_id {
+  background-color: #b1b1b3;
+}
+
+.form_form {
+  display: flex;
+  flex-direction: column;
+}
+.form_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.form_div_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}

@@ -1,0 +1,54 @@
+<nav>
+  <ul class="lu_nav">
+    <li class="li_nav">
+      <a href="/admin/jsPoems/">Back Setup Session</a>
+    </li>
+  </ul>
+</nav>
+<main class="form_container">
+  {{!--Form-- use:enctype="multipart/form-data" only if need send files --}}
+  <form action="/admin/jsPoems/newPoem" method="post" enctype="multipart/form-data" class="form_form">
+    <h2 class="form_h2">Enter new Poem</h2>
+    {{!-- Public? --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <h6 class="form_h6" for="publicForm">Select de Checkbox to do Public:</h6>
+        <input type="checkbox" name="check_public_poems" class="form_input_check" id="publicForm">
+      </div>
+    </div>
+    {{!-- Name --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="nameForm">
+          Name:
+        </label>
+        <input type="text" name="name_poems" placeholder="Enter Name" class="form_input_name" id="nameForm">
+      </div>
+    </div>
+    {{!-- Poem Text Area --}}
+    <div class="form_div">
+      <h4 class="form_h4" for="publicForm">Enter the Poem</h4>
+      <textarea class="form_text_area" name="poem_poems" placeholder="Enter the Poem Here" id="textForm"></textarea>
+    </div>
+    {{!-- Image --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="new_img_poem">
+          Image:
+        </label>
+        <input type="file" class="form_input_image" placeholder="Select an Image" name="new_img_poems"
+          id="new_img_poem">
+      </div>
+    </div>
+    {{!-- Buttons --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <button type="submit" class="form_button_submit">Save</button>
+        <a href="/admin/jsPoems"><button type="button" class="form_button_submit">Cancel</button></a>
+      </div>
+    </div>
+    {{#if error}}
+    <h5 class="form_error">{{message}} </h5>
+    {{/if}}
+  </form>
+</main>

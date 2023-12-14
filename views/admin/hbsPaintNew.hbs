@@ -1,0 +1,49 @@
+<nav>
+  <ul class="lu_nav">
+    <li class="li_nav">
+      <a href="/admin/jsPaintings/">Back Setup Session</a>
+    </li>
+  </ul>
+</nav>
+<main class="form_container">
+  {{!--Form-- use:enctype="multipart/form-data" only if need send files --}}
+  <form action="/admin/jsPaintings/newPaint" method="post" enctype="multipart/form-data" class="form_form">
+    <h2 class="form_h2">Enter new Paint</h2>
+    {{!-- Public? --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <h6 class="form_h6" for="publicForm">Select de Checkbox to do Public:</h6>
+        <input type="checkbox" name="check_public_paintings" class="form_input_check" id="publicForm">
+      </div>
+    </div>
+    {{!-- Name --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="nameForm">
+          Name:
+        </label>
+        <input type="text" name="name_paintings" placeholder="Enter Name" class="form_input_name" id="nameForm">
+      </div>
+    </div>
+    {{!-- Image --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="new_img_paintings">
+          Image:
+        </label>
+        <input type="file" class="form_input_image" placeholder="Select an Image" name="new_img_paintings"
+          id="new_img_paintings">
+      </div>
+    </div>
+    {{!-- Buttons --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <button type="submit" class="form_button_submit">Save</button>
+        <a href="/admin/jsPaintings"><button type="button" class="form_button_submit">Cancel</button></a>
+      </div>
+    </div>
+    {{#if error}}
+    <h5 class="form_error">{{message}} </h5>
+    {{/if}}
+  </form>
+</main>

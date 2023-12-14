@@ -1,0 +1,40 @@
+<nav>
+  <ul class="lu_nav">
+    <li class="li_nav">
+      <a href="/admin/jsAdminSetup/">Back Setup Session</a>
+    </li>
+  </ul>
+</nav>
+{{!-- Tabla --}}
+<div class="table_container">
+  <table class="table_table">
+    <caption class="table_caption">Publications Messages List</caption>
+    <thead class="table_thead">
+      <tr class="table_row_th">
+        <th class="col_Id">Id</th>
+        <th class="col_Name">Name</th>
+        <th class="col_Msg">Message</th>
+        <th class="col_Email">E-mail</th>
+        <th class="col_Image">Image</th>
+        <th class="col_Actions">Actions</th>
+      </tr>
+    </thead>
+    <tbody class="table_body">
+      {{#each messengerPublicTable}}
+      <tr class="table_row_tr">
+        <th class="col_Id"> {{id_messenger}}</th>
+        <td class="col_Name">{{name_messenger}}</td>
+        <td class="col_Msg">{{content_messenger}}</td>
+        <td class="col_Email">{{{email_messenger}}}</td>
+        <td class="col_Image">{{{link_img_messenger}}}</td>
+        <td class="col_Actions">
+          <a href="/admin/jsPublicationsSetup/modifyPub/{{id_messenger}}"><img class="table_icon"
+              src="../../../icons/pencil_icon.png" alt="user icon"></img></a>
+          <a href="/admin/jsPublicationsSetup/deletePub/{{id_messenger}}"><img class="table_icon"
+              src="../../../icons/rubber_icon.png" alt="user icon"></img></a>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

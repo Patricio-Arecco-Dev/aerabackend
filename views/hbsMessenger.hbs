@@ -1,0 +1,59 @@
+<nav>
+  <ul class="lu_nav">
+    <li class="li_nav">
+      <a href="/">Back Home</a>
+    </li>
+  </ul>
+</nav>
+<main class="form_container">
+  {{!--Form-- use:enctype="multipart/form-data" only if need send files --}}
+  <form action="/jsMessenger" method="post" enctype="multipart/form-data" class="form_form">
+    <h2 class="form_h2">
+      Write your message to other Administrator
+    </h2>
+    {{!-- Nic Name --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="userForm">
+          Name:
+        </label>
+        <input type="text" name="name_messenger" placeholder="Enter your Nic-name" class="form_input_name" id="userForm">
+      </div>
+    </div>
+    {{!-- Text Area --}}
+    <div class="form_div">
+      <h4 class="form_h4" for="publicForm">Message Text Area:</h4>
+      <textarea class="form_text_area" name="content_messenger" placeholder="Enter your Message Here"
+        id="messageForm"></textarea>
+    </div>
+    {{!-- Email --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="emailForm">
+          Email:
+        </label>
+        <input type="email" class="form_input_email" placeholder="Enter your E-mail" name="email_messenger"
+          id="emailForm">
+      </div>
+    </div>
+    {{!-- Image --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="imageForm">
+          Image:
+        </label>
+        <input type="file" class="form_input_image" placeholder="Select an Image" name="img_messenger" id="imageForm">
+      </div>
+    </div>
+    {{!-- Buttons --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <button type="submit" class="form_button_submit">Send</button>
+        <a class="form_a" href="/"><button type="button" class="form_button_submit">Cancel</button></a>
+      </div>
+    </div>
+    {{#if error}}
+    <h5 class="form_error">{{message}} </h5>
+    {{/if}}
+  </form>
+</main>

@@ -1,0 +1,42 @@
+<nav>
+  <ul class="lu_nav">
+    <li class="li_nav">
+      <a href="/" class="btn btn-warning">Back to Home </a>
+    </li>
+  </ul>
+</nav>
+<main class="form_container">
+  <form action="/jsLogin" method="post" class="form_form">
+    <h2 class="form_h2">
+      Enter User and Password
+    </h2>
+    {{!-- Name --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="userForm">
+          User:
+        </label>
+        <input type="text" name="nameUserHbs" placeholder="Enter-User" class="form_input_name" id="userForm">
+      </div>
+    </div>
+    {{!-- Password --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="passForm">
+          Pass:
+        </label>
+        <input type="password" name="namePassHbs" placeholder="Enter-Pass" class="form_input_pass" id="passForm">
+      </div>
+    </div>
+    {{!-- Buttons --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <button type="submit" class="form_button_submit">Enter </button>
+        <a class="form_a" href="/"><button type="button" class="form_button_submit">Cancel</button></a>
+      </div>
+    </div>
+    {{#if error}}
+    <h6 class="form_h6">User and/or Password incorrect</h6>
+    {{/if}}
+  </form>
+</main>

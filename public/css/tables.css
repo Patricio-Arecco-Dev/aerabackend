@@ -1,0 +1,83 @@
+/* Aquí Inicia el CSS del Publications */
+.table_container {
+  min-height: 70vh;
+  font-family: 'Times New Roman', Times, serif;
+}
+.table_container {
+  margin-top: 10px;
+}
+.table_table {
+  border-collapse: separate;
+  border: 3px solid black;
+  width: 95%;
+  min-height: 400px;
+  background-color: #ababac;
+  margin: 10px auto;
+}
+.table_caption {
+  font-size: 2rem;
+}
+
+.table_row_th {
+  background-color: #000;
+  color: white;
+  height: 25px;
+}
+.table_row_tr {
+  background-color: rgb(224, 224, 224);
+  color: black;
+}
+.col_Id {
+  width: 5%;
+}
+.col_Show {
+  width: 5%;
+}
+.col_Nic {
+  width: 8%;
+}
+.col_Name {
+  width: 15%;
+}
+.col_Surname {
+  width: 15%;
+}
+.col_Email {
+  width: 15%;
+}
+
+.col_Msg {
+  width: auto;
+}
+.col_Image {
+  width: 15%;
+}
+.col_Code {
+  width: 15%;
+}
+.col_Actions {
+  width: 15%;
+}
+th {
+  text-align: center;
+}
+.col_Id,
+.col_Show,
+.col_Code,
+.col_Image,
+.col_Actions {
+  text-align: center;
+}
+.col_Nic,
+.col_Name,
+.col_Surname,
+.col_Poem,
+.col_Email,
+.col_Msg {
+  padding-left: 7px;
+}
+
+.table_icon {
+  height: 35px;
+  margin: 10px;
+}

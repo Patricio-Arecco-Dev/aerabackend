@@ -1,0 +1,75 @@
+<nav>
+  <ul class="lu_nav">
+    <li class="li_nav">
+      <a href="/admin/jsPoems/">Back Setup Session</a>
+    </li>
+  </ul>
+</nav>
+<main class="form_container">
+  {{!--Form-- use:enctype="multipart/form-data" only if need send files --}}
+  <form action="/admin/jsPoems/modifyPoem" method="post" enctype="multipart/form-data" class="form_form">
+    <h2 class="form_h2">Change Data of Poem</h2>
+    {{!-- Id --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label">ID Table:
+        </label>
+        <input type="number" class="form_input_id" name="id_poems" value="{{poem.id_poems}}" readonly>
+      </div>
+    </div>
+    {{!-- Public? --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <h6 class="form_h6" for="publicForm">Status Public: {{poem.public_poems}}</h6>
+      </div>
+      <div class="form_div_div">
+        <h6 class="form_h6">Change the state by toggling the Checkbox:</h6>
+        <input type="checkbox" name="check_public_poems" class="form_input_check" {{public}}>
+      </div>
+    </div>
+    {{!-- Name --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label">Name:
+        </label>
+        <input type="text" class="form_input_name" value="{{poem.name_poems}}" name="name_poems">
+      </div>
+    </div>
+    {{!-- Poem --}}
+    <div class="form_div">
+      <h4 class="form_h4" for="publicForm">Modify the Poem</h4>
+      <textarea class="form_text_poem" name="poem_poems">{{poem.poem_poems}}</textarea>
+    </div>
+    {{!-- Image --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="codeImageForm">
+          Code Image:
+        </label>
+        <input type="text" value="{{poem.img_poems}}" name="code_img_poems" class="form_input_code" id="codeImageForm"
+          readonly>
+      </div>
+      <div class="form_div_div">
+        <label class="form_label" for="new_img_poems">
+          Image:
+        </label>
+        <input type="file" class="form_input_image" placeholder="Select an Image" name="new_img_poems"
+          id="new_img_poems">
+      </div>
+      <div class="form_div_div">
+        <h6 class="form_h6" for="deleteForm">Do you want Delete Image?</h6>
+        <input type="checkbox" name="img_delete" class="form_input_check" id="deleteForm" value="1">
+      </div>
+    </div>
+    {{!-- Buttons --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <button type="submit" class="form_button_submit">Save</button>
+        <a href="/admin/jsPoems"><button type="button" class="form_button_submit">Cancel</button></a>
+      </div>
+    </div>
+    {{#if error}}
+    <h5 class="form_error">{{message}} </h5>
+    {{/if}}
+  </form>
+</main>

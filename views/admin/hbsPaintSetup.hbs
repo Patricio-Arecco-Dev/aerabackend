@@ -1,0 +1,42 @@
+<nav>
+  <ul class="lu_nav">
+    <li class="li_nav">
+      <a href="/admin/jsAdminSetup/">Back Setup Session</a>
+    </li>
+    <li class="li_nav">
+      <a href="/admin/jsPaintings/newPaint">New Paint</a>
+  </ul>
+</nav>
+{{!-- Tabla --}}
+<div class="table_container">
+  <table class="table_table">
+    <caption class="table_caption">Messages List</caption>
+    <thead class="table_thead">
+      <tr class="table_row_th">
+        <th class="col_Id">Id</th>
+        <th class="col_Show">Show</th>
+        <th class="col_Name">Name</th>
+        <th class="col_Code">Id Cloud</th>
+        <th class="col_Image">Image</th>
+        <th class="col_Actions">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each paintingsTable}}
+      <tr class="table_row_tr">
+        <th class="col_Id"> {{id_paintings}}</th>
+        <td class="col_Show">{{public_paintings}}</td>
+        <td class="col_Name">{{name_paintings}}</td>
+        <td class="col_Code">{{{img_paintings}}}</td>
+        <td class="col_Image">{{{link_img_paintings}}}</td>
+        <td class="col_Actions">
+          <a href="/admin/jsPaintings/modifyPaint/{{id_paintings}}"><img class="table_icon"
+              src="../../../icons/pencil_icon.png" alt="user icon"></img></a>
+          <a href="/admin/jsPaintings/deletePaint/{{id_paintings}}"><img class="table_icon"
+              src="../../../icons/rubber_icon.png" alt="user icon"></img></a>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

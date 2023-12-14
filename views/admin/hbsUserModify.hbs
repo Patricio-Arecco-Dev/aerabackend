@@ -1,0 +1,86 @@
+<nav>
+  <ul class="lu_nav">
+    <li class="li_nav">
+      <a href="/admin/jsAdminSetup/">Back Setup Session</a>
+    </li>
+  </ul>
+</nav>
+<main class="form_container">
+  <form action="/admin/jsUsers/modifyUser" method="post" class="form_form">
+    <h2 class="form_h2">
+      Change Data of Public User
+    </h2>
+    {{!-- Id --}}
+    <input type="hidden" name="id_usersPublics" value="{{userPublic.id_usersPublics}}" id="userForm">
+    {{!-- Nic Name --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="nicForm">
+          Nic:
+        </label>
+        <input type="text" value="{{userPublic.nic_usersPublics}}" name="nic_usersPublics" placeholder="Enter the Nic"
+          class="form_input_nic" id="nicForm">
+      </div>
+    </div>
+    {{!-- Pass --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="passForm">
+          Pass:
+        </label>
+        <input type="password" value="{{userPublic.pass_usersPublics}}" name="pass_usersPublics"
+          placeholder="Enter the Password" class="form_input_pass" id="passForm">
+      </div>
+    </div>
+    {{!-- Name --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="nameForm">
+          Name:
+        </label>
+        <input type="text" value="{{userPublic.name_usersPublics}}" name="name_usersPublics"
+          placeholder="Enter the Name" class="form_input_name" id="nameForm">
+      </div>
+    </div>
+    {{!-- Surname --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="surnameForm">
+          Surn:
+        </label>
+        <input type="text" value="{{userPublic.surn_usersPublics}}" name="surn_usersPublics"
+          placeholder="Enter the Surname" class="form_input_surn" id="surnameForm">
+      </div>
+    </div>
+    {{!-- Age --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="ageForm">
+          Age:
+        </label>
+        <input type="number" value="{{userPublic.age_usersPublics}}" name="age_usersPublics" placeholder="Enter the Age"
+          class="form_input_age" id="ageForm">
+      </div>
+    </div>
+    {{!-- E-Mail --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <label class="form_label" for="emailForm">
+          Email:
+        </label>
+        <input type="email" value="{{userPublic.email_usersPublics}}" name="email_usersPublics"
+          placeholder="Enter the E-mail" class="form_input_email" id="emailForm">
+      </div>
+    </div>
+    {{!-- Buttons --}}
+    <div class="form_div">
+      <div class="form_div_div">
+        <button type="submit" class="form_button_submit">Save</button>
+        <a href="/admin/jsAdminSetup/"><button type="button" class="form_button_submit">Cancel</button></a>
+      </div>
+    </div>
+    {{#if error}}
+    <h5 class="form_error">{{message}} </h5>
+    {{/if}}
+  </form>
+</main>
