@@ -10,8 +10,7 @@ var pool = mysql.createPool({
   database: process.env.MYSQL_DB_NAME,
   // Verificar que la escritura MYSQL_... coincida con la declarada en el fichero .env
 });
-//
-//!  Probando desde aquí
+
 // Ping database to check for common exception errors.
 pool.getConnection((err, connection) => {
   if (err) {
@@ -28,7 +27,6 @@ pool.getConnection((err, connection) => {
   if (connection) connection.release();
   return;
 });
-//! Probando hasta aquí
 
 pool.query = util.promisify(pool.query);
 module.exports = pool;

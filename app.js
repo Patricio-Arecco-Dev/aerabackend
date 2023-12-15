@@ -1,7 +1,7 @@
 // Declaración de las librerías que al momento tiene capacidad de invocar.
 var createError = require("http-errors");
 var express = require("express");
-//var app = express();  //! Aquí
+//var app = express();
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
@@ -38,8 +38,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
-app.use(express.static("public/css"));  //! Aquí
-app.use(express.static("public/icons"));  //! Aquí
+app.use(express.static("public/css"));
+app.use(express.static("public/icons"));
+
 // Variables de sesión
 app.use(
   session({

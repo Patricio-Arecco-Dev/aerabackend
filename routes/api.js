@@ -146,7 +146,7 @@ router.get("/poems", async function (req, res, next) {
 });
 //! Envío Correos desde la Pagina Web
 /* Router POST para el envío de e-mails. */
-/* //! Deshabilitado desde Aquí
+/* //! Deshabilitado desde Aquí (solo para envío de correos)
 router.post("/contact", async (req, res) => {
   const mail = {
     to: "arecco.p@gmail.com",
